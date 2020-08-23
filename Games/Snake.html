@@ -81,7 +81,7 @@
       snake.unshift(head);
       const didEatFood = snake[0].x === foodX && snake[0].y === foodY;
       if (didEatFood) {
-        score += 10;
+        score++;
         document.getElementById('score').innerHTML = score;
         createFood();
       } else {

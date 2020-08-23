@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<link rel="stylesheet" href="TemplateData/style.css">
+<script src="TemplateData/UnityProgress.js"></script>
+<script src="Build/UnityLoader.js"></script>
+<script>
+var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Karts Build.json", {onProgress: UnityProgress});
+$(document).ready(function() {
+unityInstance.SetFullscreen(1);
+});
+$(document).ready(function() {
+var x = Math.floor(Math.random() * 256);
+var y = Math.floor(Math.random() * 256);
+var z = Math.floor(Math.random() * 256);
+if (x === 0){
+    var x = Math.floor(Math.random() * 256);
+}
+if (y === 0){
+    var y = Math.floor(Math.random() * 256);
+}
+if (z === 0){
+    var z = Math.floor(Math.random() * 256);
+}
+var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+document.body.style.background = bgColor;
+});
+</script>
+</head>
+<body>
+<div class="webgl-content">
+<div id="unityContainer" style="width: 960px; height: 600px"></div>
+</body>
+</html>
+<script>javascript:(function() {var link = document.querySelector("link[rel*='icon']") || document.createElement('link');link.type = 'image/x-icon';link.rel = 'shortcut icon';link.href = 'https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico';document.title='My Drive - Google Drive';console.log(document.title);document.getElementsByTagName('head')[0].appendChild(link);})();</script>
